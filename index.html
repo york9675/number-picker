@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Number Picker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/947773974954262588/1035916000090144799/My_project-1.png">
+</head>
+<body>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="york0524" data-description="Support me on Buy me a coffee!" data-message="Would you consider sponsoring me a few drinks? (～￣▽￣)～" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+    <div class="container">
+        <h1>Online Number Picker</h1>
+        <form id="number-picker-form">
+            <label for="start-number">Starting Number:</label>
+            <input type="number" inputmode="numeric" id="start-number" name="start" value="1" min="1">
+            <label for="end-number">Ending Number:</label>
+            <input type="number" inputmode="numeric" id="end-number" name="end" value="35" min="1">
+            <label for="advanced-toggle">Advanced Settings:</label>
+            <select id="advanced-toggle">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+            </select>
+            <div id="advanced-settings">
+                <label for="excluded-numbers">Excluded Numbers (separated by commas):</label>
+                <input type="text" id="excluded-numbers" name="excluded">
+                <label for="num-people">Number of people to pick:</label>
+                <input type="number" inputmode="numeric" id="num-people" name="people" value="1" min="1">
+                <label for="odd-even-toggle">Select only odd or even numbers:</label>
+                <select id="odd-even-toggle">
+                    <option value="all">No restriction</option>
+                    <option value="odd">Odd</option>
+                    <option value="even">Even</option>
+                </select>
+            </div>
+            <button type="button" id="generate-button">Randomly Pick Numbers</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
